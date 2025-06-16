@@ -1,0 +1,33 @@
+.exercise {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.codeEditor {
+  width: 100%;
+  min-height: 200px;
+  font-family: monospace;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.runButton {
+  background: #25c2a0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.success {
+  color: #25c2a0;
+  margin-top: 1rem;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 1rem;
+}

@@ -1,0 +1,23 @@
+@import url("../../css/custom.css");
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+
+  & > button {
+    font-weight: 600;
+  }
+}
+
+.logoWrapper {
+  width: 100%;
+  max-width: 650px;
+  margin-block: 2em;
+
+  & > h1 {
+    color: var(--ifm-color-primary);
+  }
+}
