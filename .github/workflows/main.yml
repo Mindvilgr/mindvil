@@ -7,7 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: ghcr.io/railwayapp/cli:latest
     env:
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
     steps:
@@ -21,4 +20,4 @@ jobs:
         run: npm run build
       - name: Deploy on Railway
         working-directory: ./build
-        run: railway up
+        run: npx railway up
