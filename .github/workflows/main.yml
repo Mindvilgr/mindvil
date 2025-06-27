@@ -18,12 +18,6 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Install deps
-        run: npm ci 
-
-      - name: Build docusaurus app
-        run: npm run build
-
       - name: Install Railway CLI
         run: npm install -g @railway/cli
 
