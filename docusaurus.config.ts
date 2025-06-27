@@ -46,8 +46,9 @@ const config: Config = {
       "classic",
       {
         docs: {
+          path: 'docs',
           routeBasePath: "courses",
-          include: availableCourses.map(course => course.id),
+          include: availableCourses.map(course => `${course.id}/**/*.{md,mdx}`),
           sidebarPath: "./sidebars.ts",
           // Enable MDX
           remarkPlugins: [require("remark-math")],
