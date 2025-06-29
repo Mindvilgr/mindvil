@@ -72,8 +72,7 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "python-engineersSidebar",
-          // sidebarId: "pythonSidebar",
+          sidebarId: "pythonSidebar",
           position: "right",
           label: "Learn python"
         }

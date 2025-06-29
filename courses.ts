@@ -7,13 +7,13 @@
  * @property {string} image URL to the course's image.
  */
 const allCourses = [
-  // {
-  //   id: "python",
-  //   public: true,
-  //   name: "Python Fundamentals",
-  //   desc: "Learn the basics of Python",
-  //   image: "https://picsum.photos/seed/snake/390/200"
-  // },
+  {
+    id: "python",
+    public: true,
+    name: "Python Fundamentals",
+    desc: "Learn the basics of Python",
+    image: "https://picsum.photos/seed/snake/390/200"
+  },
   // {
   //   id: "python-research",
   //   public: false,
