@@ -22,6 +22,7 @@
 }
 
 .coursePlaceholder {
+  min-width: var(--card-w);
   max-width: var(--card-w);
   width: 100%;
   height: var(--card-h);
