@@ -7,6 +7,16 @@
  * @property {string} image URL to the course's image.
  */
 const allCourses = [
+const placeholderCourse = {
+  id: "placeholder",
+  public: true,
+  name: "_",
+  desc: "_",
+  image: ""
+}
+
+export const allCourses = [
+  {...placeholderCourse},
   {
     id: "python",
     public: true,
