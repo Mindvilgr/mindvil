@@ -26,7 +26,7 @@ export const allCourses = [
   },
   {
     id: "python-research",
-    public: false,
+    public: true,
     inNav: true,
     name: "Python for Researchers",
     desc: "Python a tool for research",
