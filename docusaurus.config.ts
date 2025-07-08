@@ -51,8 +51,11 @@ const config: Config = {
           include: availableCourses.map(course => `${course.id}/**/*.{md,mdx}`),
           sidebarPath: "./sidebars.ts",
           // Enable MDX
-          remarkPlugins: [require("remark-math")],
-          rehypePlugins: [require("rehype-katex")]
+          remarkPlugins: [
+          require("remark-math"),
+          // require("@fec/remark-a11y-emoji")  // support various markdown icons with :markdown-id: 
+          ],
+          rehypePlugins: [require("rehype-katex")],
         },
         blog: false,
         theme: {
