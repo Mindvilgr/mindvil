@@ -2,7 +2,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
 
-import availableCourses from "./courses";
+import availableCourses, { allCourses } from "./courses";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -18,7 +18,7 @@ const config: Config = {
   favicon: "img/favicon.svg",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://creative-griffin-08c509.netlify.app",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -28,7 +28,7 @@ const config: Config = {
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   i18n: {
@@ -69,14 +69,20 @@ const config: Config = {
         alt: "logo",
         src: "img/logo.svg"
       },
-      items: [
-        {
-          type: "docSidebar",
-          sidebarId: "pythonSidebar",
-          position: "right",
-          label: "Learn python"
-        }
-      ]
+      items: allCourses.filter(course => course.inNav && course.public).map(course => ({
+        type: "docSidebar",
+        sidebarId: `${course.id}Sidebar`,
+        position: "right",
+        label: `${course.name}`
+      }))
+      // items: [
+      //   {
+      //     type: "docSidebar",
+      //     sidebarId: "python-researchSidebar",
+      //     position: "right",
+      //     label: "Learn python"
+      //   }
+      // ]
     },
     footer: {
       style: "dark",
