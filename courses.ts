@@ -6,7 +6,6 @@
  * @property {string} desc short description of the course content.
  * @property {string} image URL to the course's image.
  */
-const allCourses = [
 const placeholderCourse = {
   id: "placeholder",
   public: true,
@@ -19,7 +18,8 @@ export const allCourses = [
   {...placeholderCourse},
   {
     id: "python",
-    public: true,
+    public: false,
+    inNav: true,
     name: "Python Fundamentals",
     desc: "Learn the basics of Python",
     image: "https://picsum.photos/seed/snake/390/200"
@@ -27,10 +27,11 @@ export const allCourses = [
   {
     id: "python-research",
     public: false,
+    inNav: true,
     name: "Python for Researchers",
     desc: "Python a tool for research",
     image: "https://picsum.photos/seed/snake/390/200"
-  }
+  },
 ];
 
 const availableCourses = allCourses.filter(course => course.public);
