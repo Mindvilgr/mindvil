@@ -25,11 +25,11 @@ export const allCourses = [
     image: "https://picsum.photos/seed/snake/390/200"
   },
   {
-    id: "python-research",
+    id: "python-engineers",
     public: true,
     inNav: true,
-    name: "Python for Researchers",
-    desc: "Python a tool for research",
+    name: "Python for engineers",
+    desc: "Python a tool for engineers",
     image: "https://picsum.photos/seed/snake/390/200"
   },
 ];

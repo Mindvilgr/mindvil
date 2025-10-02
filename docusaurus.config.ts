@@ -51,8 +51,11 @@ const config: Config = {
           include: availableCourses.map(course => `${course.id}/**/*.{md,mdx}`),
           sidebarPath: "./sidebars.ts",
           // Enable MDX
-          remarkPlugins: [require("remark-math")],
-          rehypePlugins: [require("rehype-katex")]
+          remarkPlugins: [
+          require("remark-math"),
+          // require("@fec/remark-a11y-emoji")  // support various markdown icons with :markdown-id: 
+          ],
+          rehypePlugins: [require("rehype-katex")],
         },
         blog: false,
         theme: {
@@ -61,7 +64,14 @@ const config: Config = {
       } satisfies Preset.Options
     ]
   ],
-
+  stylesheets: [
+      {
+        href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+        type: 'text/css',
+        integrity: 'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+        crossorigin: 'anonymous',
+      },
+    ],
   themeConfig: {
     image: "img/social-card.jpg",
     navbar: {
